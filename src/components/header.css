@@ -1,0 +1,347 @@
+html{
+  font-family: "Inter",sans-serif;
+}
+.intro{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30rem;
+}
+.header{
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.alerts{
+  display: flex;
+  gap: 15px;
+  margin-left: 30rem;
+}
+
+.code-blue{
+    /* height: auto; */
+    height: 3rem;
+    border: 1px solid white;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+}
+.code-red{
+    height: 3rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    background-color: rgba(255, 0, 0, 0.79); 
+    padding: 12px;
+    font-size: 14px;
+}
+.code-blue:hover{
+  background-color: #0050a5;
+}
+.code-red:hover{
+  background-color: rgba(197, 0, 0, 0.79); 
+}
+@media(max-width:1200px){
+  .code-blue,.code-red{
+    padding: 14px;
+    height: 4rem;
+  }
+  .code-blue button,.code-red button{
+    text-align: center;
+    font-size: 10px;
+  }
+  .header{
+    margin-bottom: 7rem;
+  }
+  .alerts{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hospitalbanner{
+  background-image: url("https://www.oneindia.com/img/1200x80/2020/03/wenlockhospital-1585222316.jpg");
+  height: auto;
+  min-height: 30rem;
+  max-height: 30rem;
+  width: 60rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+}
+@media (max-width: 768px) {
+  .hospitalbanner {
+    background-size: contain; /* Ensures full image visibility */
+    height: 60vh; /* Adjust height for small screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .hospitalbanner {
+    height: 100vh; /* Fullscreen for large displays */
+    background-size: cover;
+  }
+}
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  gap: 1rem;
+}
+.home h2{
+  margin-bottom: 0.5rem;
+}
+.links{
+  height: 10%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:12px;
+}
+.patientview,.staffview{
+  width: 250px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+.patientview:hover{
+  background-color: #0056b3
+}
+.staffview:hover{
+  background-color: #0056b3
+}
+.patientview a,.staffview a{
+  text-decoration: none;
+  color: black;
+}
+
+/*PatientView.js and StaffView.js styling*/
+.staffdash{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.fullpatientview{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.fullpatientview, .hospital-departments, .generate-token {
+  width: 90%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+.patient-queue th,td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; 
+}
+.patient-queue tr:nth-child(even){
+  background-color: #f9f9f9;
+}
+.patient-queue tr:hover{
+  background-color: #eef;
+}
+
+.generate-token button {
+  background-color: #007bff; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.generate-token button:hover {
+  background-color: #0056b3;
+}
+
+.generate-token div{
+    margin-bottom: 1rem;
+}
+.patient{
+  width: 20%;
+  margin-left: 0.5rem;
+}
+.patdash{
+  text-align: center;
+}
+.patient label{
+    font-family: sans-serif;
+}
+.patient-queue{
+  width: 100%;
+  border-collapse: collapse;
+}
+.patient-queue th, .patient-queue td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.patient-queue tr:nth-child(even){
+  background-color: #eef3f7;
+}
+.dept{
+    margin-left: 0.5rem;
+    font-size: medium;
+    font-family: sans-serif;
+}
+.dept label{
+    font-family: sans-serif;
+}
+.hospital-departments {
+  width: 50%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-departments table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.hospital-departments th {
+  background-color: #3496ff;
+  color: white;
+  font-size: 18px;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.table table{
+  width: max-content;
+}
+.table th,td{
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; 
+}
+.table tr:nth-child(even){
+  background-color: #f9f9f9;
+}
+.table tr:hover{
+  background-color: #eef;
+}
+.table th{
+  background-color: #0050a5;
+  color: #eef3f7;
+  font-size: 16px;
+}
+.inventoryout{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+
+}
+.inventory{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.inventory h2{
+  width: 80%;
+  margin-bottom: 5px;
+  text-align: center;
+  /* transform: rotate(-90deg);
+  transform-origin:center; */
+}
+@media (max-width: 500px) {
+  .table h2{
+    font-size: 14px;  /* Make text slightly smaller */
+    margin-bottom: 3px;  /* Reduce space below heading */
+  }
+
+  .table{
+    width: 100%;  /* Ensure table fills the container */
+    font-size: 12px;  /* Reduce text size for readability */
+  }
+
+  th, td {
+    padding: 5px;  /* Reduce padding to fit smaller screens */
+  }
+}
+@media(min-width:768px){
+  .table h2{
+    font-size: 32px;
+  }
+  .table th,td{
+    font-size: 1.5rem;
+  }
+}
+.updatestock input{
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.updatestock button{
+  background-color: #208afc; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+}
+.updatestock button:hover {
+  background-color: #007bff;
+}
+.fullpatientview{
+  display: flex;
+  flex-direction: column;
+}
+.alertstable{
+  width: 90%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  text-align: center;
+}
